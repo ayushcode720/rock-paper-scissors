@@ -5,8 +5,10 @@
     <title>rock-paper-scissors game</title>
 
     <style>
+
         *{
             background-color: #141414;
+            margin: 0;
         }
 
         .line1{
@@ -14,6 +16,11 @@
             font-size: 30px;
             color: white;
             font-weight: 700;
+            margin-bottom: 30px;
+        }
+
+        .three{
+            margin-bottom: 20px;
         }
 
         .rock,.paper,.scissors{
@@ -37,6 +44,7 @@
         font-family: Arial, Helvetica, sans-serif;
             color: white;
             margin-top: 60px;
+            margin-bottom: 13px;
        }
 
        .reset{
@@ -49,7 +57,6 @@
         border-bottom-right-radius: 20px;
         border-top-left-radius: 20px;
         box-shadow: 7px 7px  rgb(97, 97, 97);
-
        }
 
        .reset:hover{
@@ -60,12 +67,23 @@
         opacity: 0.9;
        }
 
+       .every{
+        display: flex;
+        justify-content: center;
+        align-items:center;
+        height: 100vh;
+        flex-direction: column;
+       }
+
     </style>
 </head>
 
 <body>
-    <p class="line1">Rock Paper Scissors</p>
 
+    <div class="every">
+          <p class="line1">Rock Paper Scissors</p>
+
+          <div class="three">
     <button  class="rock" onclick="
     let com_move = computer_move(); 
 
@@ -130,7 +148,7 @@ document.querySelector(`.js-move`).innerHTML = `You ✌️  ${com_move} computer
 
 
 ">✌️</button>
-
+    </div>
 
     <p class="position"></p>
 
@@ -148,6 +166,8 @@ jsscore();
 
 ">Reset Score</button>
 
+    </div>
+  
 
     <script>
 
